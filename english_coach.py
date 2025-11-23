@@ -15,7 +15,7 @@ def get_native_explanation(chinese_text):
         return "⚠️ Error: API Key not found. Please set it in Streamlit Secrets."
 
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-pro')
 
     prompt = f"""
     You are an expert American English verbal coach. 
@@ -61,4 +61,5 @@ if st.button("Translate & Explain", type="primary"):
 
 # 页脚
 st.markdown("---")
+
 st.caption("Powered by Gemini 1.5 Flash")
